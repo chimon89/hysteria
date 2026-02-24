@@ -228,6 +228,8 @@ type TrafficLogger interface {
 	LogOnlineState(id string, online bool)
 	TraceStream(stream HyStream, stats *StreamStats)
 	UntraceStream(stream HyStream)
+	PushTrafficToV2boardInterval(url string, interval time.Duration)
+	NewKick(id string) (ok bool)
 }
 
 type StreamState int
